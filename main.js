@@ -11,6 +11,9 @@ createGrid = (numberOfSquare) => {
         createSquares();
     }
 }
+clearGrid = () => {
+    gridContainer.innerHTML="";
+}
 createGrid(16);
 /*
     Button Events
@@ -40,7 +43,10 @@ blackColor = () => {
 erase = () => {
     hoverEvent("background-color:");
 }
-
+//Resets grid
+reset = () => {
+    clearGrid();
+}
 blackColor(); //Default event
 
 checkButtonId = (id) => {
@@ -48,5 +54,8 @@ checkButtonId = (id) => {
         case 'black' : blackColor(); 
         break;
         case 'eraser' : erase();
+        break;
+        case 'reset' : reset();
+        break;
     }
 }
