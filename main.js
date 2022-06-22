@@ -12,7 +12,9 @@ createGrid = (numberOfSquare) => {
     }
 }
 createGrid(16);
-//Buttons
+/*
+    Button Events
+*/
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
@@ -22,19 +24,29 @@ buttons.forEach((button) => {
     checkButtonId(checkID);
   });
 });
+hoverEvent = (style) => {
+    let square = document.querySelectorAll('.grid-square');
+    square.forEach((hover) => {
+        hover.addEventListener('mouseover', function( event ) {
+            event.target.setAttribute("style", `${style}`);
+        });
+    });
+}
+// Changes grid squares to color black when hovered
+blackColor = () => {
+    hoverEvent("background-color:black;");
+}
+// Erases grid square's color when hovered
+erase = () => {
+    hoverEvent("background-color:");
+}
+
+blackColor(); //Default event
+
 checkButtonId = (id) => {
     switch(id) {
         case 'black' : blackColor(); 
         break;
+        case 'eraser' : erase();
     }
 }
-// Changes grid squares to color black when hovered
-blackColor = () => {
-    let square = document.querySelectorAll('.grid-square');
-    square.forEach((hover) => {
-        hover.addEventListener('mouseover', function( event ) {
-            event.target.setAttribute("style", "background-color:black;");
-        });
-    });
-}
-blackColor(); //Default event
