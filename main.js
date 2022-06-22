@@ -1,6 +1,4 @@
-/*
-    Creates Grid
-*/
+//Creates Grid
 const gridContainer = document.querySelector('#grid-container');
 createSquares = () => {
     const gridSquare = document.createElement('div');
@@ -14,6 +12,12 @@ createGrid = (numberOfSquare) => {
     }
 }
 createGrid(16);
-/*
-    Buttons
-*/
+//Buttons
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    let checkID = button.id;
+    console.log(checkID);
+  });
+});
