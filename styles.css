@@ -4,12 +4,14 @@
 }
 body {
     padding: 40px;
+    background-color: #F2F3F5;
 }
 #title {
     text-align: center;
     font-size: 75px;
     margin-bottom: 50px;
     letter-spacing: 15px;
+    color: #4C1C24;
 }
 #content-container {
     display: flex;
@@ -17,7 +19,6 @@ body {
 }
 #button-container,
 #grid-container {
-    background-color: aquamarine;
     height: 550px;
 }
 #button-container {
@@ -32,6 +33,7 @@ body {
     border-radius: 25px;
     font-size: 30px;
     margin: 10px;
+    border: #4C1C24 3px solid;
 }
 #grid-container {
     width: 700px;
@@ -39,5 +41,5 @@ body {
     border: black 2px solid;
 }
 .grid-square {
-    border: 0.1px solid black;
+    border: 0.1px solid #4C1C24;
 }
