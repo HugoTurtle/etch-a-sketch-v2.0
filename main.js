@@ -24,7 +24,6 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
     let checkID = button.id;
-    console.log(checkID);
     checkButtonId(checkID);
   });
 });
@@ -50,6 +49,18 @@ reset = () => {
     let answer = prompt("Enter number for your new grid: ");
     createGrid(answer);
 }
+const randColor = () =>  {
+    return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
+}
+// Random color when hovered
+rainbow = () => {
+    let square = document.querySelectorAll('.grid-square');
+    square.forEach((hover) => {
+        hover.addEventListener('mouseover', function( event ) {
+            event.target.setAttribute("style", `background-color:${randColor()}`);
+        });
+    });
+}
 blackColor(); //Default event
 
 checkButtonId = (id) => {
@@ -59,6 +70,8 @@ checkButtonId = (id) => {
         case 'eraser' : erase();
         break;
         case 'reset' : reset();
+        break;
+        case 'rainbow' : rainbow();
         break;
     }
 }
