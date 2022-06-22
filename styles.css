@@ -41,7 +41,7 @@ body {
     border: black 2px solid;
 }
 .grid-square {
-    border: 0.1px solid #4C1C24;
+    border: 0.1px solid black;
 }
 #button-container button:hover {
     background-color: white;
