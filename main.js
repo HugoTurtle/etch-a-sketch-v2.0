@@ -6,6 +6,7 @@ createSquares = () => {
     gridContainer.append(gridSquare);
 }
 createGrid = (numberOfSquare) => {
+    (numberOfSquare > 100) ? numberOfSquare = 64 : numberOfSquare = numberOfSquare;
     gridContainer.setAttribute('style',`grid-template-columns : repeat(${numberOfSquare}, 1fr)`)
     for(let i = 0; i < numberOfSquare * numberOfSquare; ++i) {
         createSquares();
