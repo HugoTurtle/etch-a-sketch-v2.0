@@ -24,10 +24,11 @@ buttons.forEach((button) => {
 });
 checkButtonId = (id) => {
     switch(id) {
-        case 'black' : blackColor();
+        case 'black' : blackColor(); 
         break;
     }
 }
+// Changes grid squares to color black when hovered
 blackColor = () => {
     let square = document.querySelectorAll('.grid-square');
     square.forEach((hover) => {
@@ -36,4 +37,4 @@ blackColor = () => {
         });
     });
 }
-blackColor();
+blackColor(); //Default event
