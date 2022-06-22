@@ -45,6 +45,6 @@ body {
 }
 #button-container button:hover {
     background-color: white;
-    height: 77px;
     border-width: 5px;
+    box-shadow: 5px 5px 5px grey;
   }
