@@ -35,8 +35,9 @@ body {
 }
 #grid-container {
     width: 700px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     border: black 2px solid;
-    border-radius: 15px;
+}
+.grid-square {
+    border: 0.1px solid black;
 }
