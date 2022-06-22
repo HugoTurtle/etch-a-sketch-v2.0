@@ -3,9 +3,25 @@
     padding: 0;
 }
 body {
-    padding: 70px;
+    padding: 40px;
 }
 #title {
     text-align: center;
     font-size: 75px;
+    margin-bottom: 50px;
+}
+#content-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+#button-container,
+#grid-container {
+    background-color: aquamarine;
+    height: 550px;
+}
+#button-container {
+    width: 250px;
+}
+#grid-container {
+    width: 700px;
 }
