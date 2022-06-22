@@ -21,6 +21,16 @@ body {
 }
 #button-container {
     width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#button-container button {
+    width: auto;
+    height: 75px;
+    border-radius: 25px;
+    font-size: 30px;
+    margin: 10px;
 }
 #grid-container {
     width: 700px;
