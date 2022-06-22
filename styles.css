@@ -43,3 +43,8 @@ body {
 .grid-square {
     border: 0.1px solid #4C1C24;
 }
+#button-container button:hover {
+    background-color: white;
+    height: 77px;
+    border-width: 5px;
+  }
