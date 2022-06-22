@@ -1,1 +1,2 @@
 # etch-a-sketch-v2.0
+With this project I'll be making an etch-a-sketch. To be more specific a browser version of something between a sketchpad and an Etch-A-Sketch. It'll be a 16x16 grid as default, but can be modified to up too 100x100.
