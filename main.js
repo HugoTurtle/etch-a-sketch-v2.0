@@ -46,6 +46,8 @@ erase = () => {
 //Resets grid
 reset = () => {
     clearGrid();
+    let answer = prompt("Enter number for your new grid: ");
+    createGrid(answer);
 }
 blackColor(); //Default event
 
