@@ -19,5 +19,21 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => {
     let checkID = button.id;
     console.log(checkID);
+    checkButtonId(checkID);
   });
 });
+checkButtonId = (id) => {
+    switch(id) {
+        case 'black' : blackColor();
+        break;
+    }
+}
+blackColor = () => {
+    let square = document.querySelectorAll('.grid-square');
+    square.forEach((hover) => {
+        hover.addEventListener('mouseover', function( event ) {
+            event.target.setAttribute("style", "background-color:black;");
+        });
+    });
+}
+blackColor();
