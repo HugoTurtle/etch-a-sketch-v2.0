@@ -1,8 +1,13 @@
 const gridContainer = document.querySelector('#grid-container');
-
+createSquares = () => {
+    const gridSquare = document.createElement('div');
+    gridSquare.classList.add('grid-square')
+    gridContainer.append(gridSquare);
+}
 createGrid = (numberOfSquare) => {
-    for(let i = 0; i < numberOfSquare * 2; ++i) {
-        const gridSquare = document.createElement('div');
-        gridContainer.append(gridSquare);
+    gridContainer.setAttribute('style',`grid-template-columns : repeat(${numberOfSquare}, 1fr)`)
+    for(let i = 0; i < numberOfSquare * numberOfSquare; ++i) {
+        createSquares();
     }
 }
+createGrid(16);
